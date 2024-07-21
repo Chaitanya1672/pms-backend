@@ -1,0 +1,48 @@
+{
+  "name": "pms-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "dev": "nodemon src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:check": "eslint . --max-warnings=1500",
+    "lint:fix": "eslint . --fix",
+    "lint-staged": "lint-staged",
+    "format:fix": "prettier --write \"**/*.{ts,tsx,json,scss,css}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,json,scss,css}\"",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "typescript": "^5.5.3",
+    "zod": "^3.23.8",
+    "zod-error": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.11",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-tsdoc": "^0.3.0",
+    "husky": "^9.1.1",
+    "lint-staged": "^15.2.7",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2"
+  },
+  "lint-staged": {
+    "**/*.{ts,json}": [
+      "prettier --write"
+    ],
+    "**/*.ts": "eslint --fix"
+  }
+}
