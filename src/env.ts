@@ -5,6 +5,7 @@ export const envSchema = z.object({
   SERVER_PORT: z.string(),
   MONGO_DB_URL: z.string().url().optional(),
   POSTGRES_DB_URL: z.string().url().optional(),
+  ALPHA_ADVANTAGE_API_KEY: z.string(),
   // JWT_SECRET: z.string().min(32),
 })
 
