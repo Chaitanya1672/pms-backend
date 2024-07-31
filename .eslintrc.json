@@ -27,7 +27,7 @@
           {
             "selector": "interface",
             "format": ["PascalCase"],
-            "prefix": ["Interface", "TestInterface"]
+            "prefix": ["I", "Interface", "TestInterface"]
           },
           {
             "selector": ["typeAlias", "typeLike", "enum"],

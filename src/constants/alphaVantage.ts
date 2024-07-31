@@ -1,2 +1,6 @@
 export const timeSeriesIntrday = 'TIME_SERIES_INTRADAY'
 export const timeSeriesDaily = 'TIME_SERIES_DAILY'
+export const timeSeriesWeekly = 'TIME_SERIES_WEEKLY'
+export const timeSeriesMonthly = 'TIME_SERIES_MONTHLY'
+export const timeSeriesGlobalQuote = 'GLOBAL_QUOTE'
+export const utilitySymbolSearch = 'SYMBOL_SEARCH'
