@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { appConfig } from '../config/appConfig'
-import type { ISymbolSearchParams } from '../types/search'
-import { utilitySymbolSearch } from '../constants/alphaVantage'
+import type { ISymbolSearchParams } from '../types/utilityOptions'
+import { utilityMarketStatus, utilitySymbolSearch } from '../constants/alphaVantage'
 
 const BASE_URL: string = appConfig.alphaVantageBaseUrl
 const API_KEY: string = appConfig.alphaVantageApiKey
@@ -28,6 +28,22 @@ const fetchSymbolSearch = async ({
   }
 }
 
+const fetchMarketStatus = async (): Promise<any> => {
+  try {
+    const response = await axios.get(BASE_URL, {
+      params: {
+        function: utilityMarketStatus,
+        apikey: API_KEY,
+      },
+    })
+
+    return response.data
+  } catch (error) {
+    console.error('Error fetching market status data:', error)
+    throw new Error('Failed to fetch market status data')
+  }
+}
 export default {
   fetchSymbolSearch,
+  fetchMarketStatus,
 }

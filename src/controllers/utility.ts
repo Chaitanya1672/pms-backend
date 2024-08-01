@@ -25,10 +25,19 @@ const getSymbolSearch = async (req: Request, res: Response) => {
   }
 }
 
-// const getGlobalMarketStatus = async (req: Request, res: Response) => {
-
-// }
+const getGlobalMarketStatus = async (req: Request, res: Response) => {
+  try {
+    const data = await utility.fetchMarketStatus()
+    return res.json({
+      message: 'Market status fetched successfully!',
+      data: data,
+    })
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch market status data' })
+  }
+}
 
 export default {
   getSymbolSearch,
+  getGlobalMarketStatus,
 }
