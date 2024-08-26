@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express'
-import options from '../services/options'
-import type { IDataType } from '../types/timeSeries'
+import options from '../../services/alphaVantage/options'
+import type { IDataType } from '../../types/alphaVantage/timeSeries'
 
 const getHistoricalOptions = async (req: Request, res: Response) => {
   const { symbol, date, datatype } = req.query

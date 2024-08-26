@@ -9,4 +9,8 @@ export const appConfig = {
   supportedLocales: ['hi', 'en', 'zh', 'fr', 'sp'],
   alphaVantageApiKey: process.env.ALPHA_VANTAGE_API_KEY as string,
   alphaVantageBaseUrl: process.env.ALPHA_VANTAGE_API_URL as string,
+
+  rapidApiKey: process.env.RAPID_API_KEY as string,
+  rapidApiBaseUrl: process.env.RAPID_API_URL as string,
+  rapidApiHost: process.env.RAPID_API_HOST as string,
 }

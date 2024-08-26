@@ -1,11 +1,15 @@
 import express from 'express'
 const router = express.Router()
-import timeSeries from './timeSeries'
-import utility from './utility'
-import options from './options'
+import timeSeries from './alphaVantage/timeSeries'
+import utility from './alphaVantage/utility'
+import options from './alphaVantage/options'
 
+// Alpha-Vantage routes
 router.use('/time-series', timeSeries)
 router.use('/utility', utility)
 router.use('/options', options)
+
+// Rapid-API routes
+router.use('/search', options)
 
 export default router

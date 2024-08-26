@@ -1,7 +1,7 @@
 import axios from 'axios'
-import { appConfig } from '../config/appConfig'
-import type { IHistoricalOptionsParams } from '../types/utilityOptions'
-import { optionsHistoricalData } from '../constants/alphaVantage'
+import type { IHistoricalOptionsParams } from '../../types/alphaVantage/utilityOptions'
+import { appConfig } from '../../config'
+import { optionsHistoricalData } from '../../constants/alphaVantage'
 
 const BASE_URL: string = appConfig.alphaVantageBaseUrl
 const API_KEY: string = appConfig.alphaVantageApiKey

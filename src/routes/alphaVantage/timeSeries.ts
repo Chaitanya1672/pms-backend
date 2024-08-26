@@ -1,5 +1,5 @@
 import express from 'express'
-import timeSeries from '../controllers/timeSeries'
+import timeSeries from '../../controllers/alphaVantage/timeSeries'
 const router = express.Router()
 
 router.get('/time', timeSeries.getIntraDayData)
