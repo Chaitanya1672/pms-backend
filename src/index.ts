@@ -9,7 +9,7 @@ import errorMessage from './constants/errorMessage'
 dotenv.config()
 
 const app = express()
-const port = process.env.SERVER_PORT || 3000
+const port = process.env.SERVER_PORT || 3333
 
 app.get('/', (req: Request, res: Response, next: NextFunction) => {
   res.send('Hello World!')

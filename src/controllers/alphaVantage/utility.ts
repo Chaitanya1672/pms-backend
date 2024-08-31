@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express'
-import utility from '../services/utility'
-import type { IDataType } from '../types/timeSeries'
+import utility from '../../services/alphaVantage/utility'
+import type { IDataType } from '../../types/alphaVantage/timeSeries'
 
 const getSymbolSearch = async (req: Request, res: Response) => {
   const { keywords, datatype } = req.query

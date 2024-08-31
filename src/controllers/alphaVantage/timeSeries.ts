@@ -1,7 +1,7 @@
-import errorMessages from '../constants/errorMessage'
+import errorMessages from '../../constants/errorMessage'
 import type { Request, Response } from 'express'
-import timeSeries from '../services/timeSeries'
-import type { IDataType, IOutputSize } from '../types/timeSeries'
+import timeSeries from '../../services/alphaVantage/timeSeries'
+import type { IDataType, IOutputSize } from '../../types/alphaVantage/timeSeries'
 
 const getIntraDayData = async (req: Request, res: Response) => {
   const { interval, symbol, outputsize, month, datatype } = req.query
