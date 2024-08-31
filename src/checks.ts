@@ -17,8 +17,6 @@ export const logIssues = async (): Promise<void> => {
     } else {
       console.info('The environment variables are valid!')
     }
-
-    // Log the SuperAdmin environment variable issue (if any)
   } catch (error) {
     console.error('Error logging environment variable issues:', error)
   }

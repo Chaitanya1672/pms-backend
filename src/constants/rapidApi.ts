@@ -1,2 +1,5 @@
-export const SEARCH_STOCK = 'search'
+export const SEARCH_STOCK = 'stock'
 export const SEARCH_INDUSTRY = 'industry_search'
+export const SEARCH_MUTUAL_FUND = 'industry_search'
+export const BSE_MOST_ACTIVE = 'BSE_most_active'
+export const NSE_MOST_ACTIVE = 'NSE_most_active'

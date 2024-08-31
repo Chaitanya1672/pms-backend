@@ -2,5 +2,9 @@ export interface IStockTypeParams {
   name: string;
 }
 export interface IIndustrySearchParams {
-  query: string;
+  query: any;
+}
+
+export interface IMutualFundSearchParams {
+  query: any;
 }
