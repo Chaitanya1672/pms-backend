@@ -1,19 +1,19 @@
 import axios from 'axios'
-import { appConfig } from '../config/appConfig'
-import {
-  timeSeriesDaily,
-  timeSeriesGlobalQuote,
-  timeSeriesIntrday,
-  timeSeriesMonthly,
-  timeSeriesWeekly,
-} from '../constants/alphaVantage'
+import { appConfig } from '../../config'
 import type {
   IDailyParams,
   IGlobalQuoteParams,
   IIntraDayParams,
   IMonthlyParams,
   IWeeklyParams,
-} from '../types/timeSeries'
+} from '../../types/alphaVantage/timeSeries'
+import {
+  timeSeriesDaily,
+  timeSeriesGlobalQuote,
+  timeSeriesIntrday,
+  timeSeriesMonthly,
+  timeSeriesWeekly,
+} from '../../constants/alphaVantage'
 
 const BASE_URL: string = appConfig.alphaVantageBaseUrl
 const API_KEY: string = appConfig.alphaVantageApiKey

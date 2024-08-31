@@ -1,5 +1,5 @@
 import express from 'express'
-import options from '../controllers/options'
+import options from '../../controllers/alphaVantage/options'
 const router = express.Router()
 
 router.get('/historical', options.getHistoricalOptions)

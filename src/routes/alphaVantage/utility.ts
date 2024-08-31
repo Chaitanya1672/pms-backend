@@ -1,5 +1,5 @@
 import express from 'express'
-import utility from '../controllers/utility'
+import utility from '../../controllers/alphaVantage/utility'
 const router = express.Router()
 
 router.get('/search', utility.getSymbolSearch)

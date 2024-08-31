@@ -1,7 +1,7 @@
 import axios from 'axios'
-import { appConfig } from '../config/appConfig'
-import type { ISymbolSearchParams } from '../types/utilityOptions'
-import { utilityMarketStatus, utilitySymbolSearch } from '../constants/alphaVantage'
+import { appConfig } from '../../config'
+import type { ISymbolSearchParams } from '../../types/alphaVantage/utilityOptions'
+import { utilityMarketStatus, utilitySymbolSearch } from '../../constants/alphaVantage'
 
 const BASE_URL: string = appConfig.alphaVantageBaseUrl
 const API_KEY: string = appConfig.alphaVantageApiKey
