@@ -15,7 +15,7 @@ const localhost = process.env.LOCALHOST_URL
 const fronendDomain = process.env.FORONTEND_URL
 
 const allowedOrigins = [localhost, fronendDomain]
-
+console.log({ fronendDomain, localhost })
 const corsOptions = {
   origin: function (origin: any, callback: any) {
     if (!origin || allowedOrigins.includes(origin)) {
