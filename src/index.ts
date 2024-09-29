@@ -5,11 +5,29 @@ import createError from 'http-errors'
 import { logIssues } from './checks'
 import indexRouter from './routes/index'
 import errorMessage from './constants/errorMessage'
+import cors from 'cors'
 
 dotenv.config()
 
 const app = express()
 const port = process.env.SERVER_PORT || 3333
+const localhost = process.env.LOCALHOST_URL
+const fronendDomain = process.env.FORONTEND_URL
+
+const allowedOrigins = [localhost, fronendDomain]
+
+const corsOptions = {
+  origin: function (origin: any, callback: any) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  },
+  credentials: true,
+}
+
+app.use(cors(corsOptions))
 
 app.get('/', (req: Request, res: Response, next: NextFunction) => {
   res.send('Hello World!')

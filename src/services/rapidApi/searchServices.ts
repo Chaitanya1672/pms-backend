@@ -33,13 +33,7 @@ const fetchStockSeacrh = async ({ name }: IStockTypeParams): Promise<any> => {
 const fetchIndustrySearch = async ({ query }: IIndustrySearchParams): Promise<any> => {
   try {
     const url = `${BASE_URL}/${SEARCH_INDUSTRY}`
-    console.log({ url })
-    console.log({
-      headers: {
-        'x-rapidapi-key': API_KEY,
-        'x-rapidapi-host': HOST_URL,
-      },
-    })
+
     const response = await axios.get(url, {
       params: {
         query,

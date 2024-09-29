@@ -3,7 +3,7 @@ import searchServices from '../../services/rapidApi/searchServices'
 
 export const getStock = async (req: Request, res: Response) => {
   const { name } = req.query
-  console.log({ name })
+
   if (!name || typeof name !== 'string') {
     res.status(400).json({ error: 'Stock name is required and should be a string' })
     return
@@ -19,14 +19,14 @@ export const getStock = async (req: Request, res: Response) => {
 
 export const getIndustry = async (req: Request, res: Response) => {
   const { query } = req.query
-  console.log({ query })
+
   try {
     if (!query || typeof query !== 'string') {
       res.status(400).json({ error: 'Industry name is required and should be a string' })
       return
     }
     const data = await searchServices.fetchIndustrySearch({ query })
-    console.log(data)
+
     return res.status(200).json(data)
   } catch (error: any) {
     return res.status(400).json({ error: error.message })
