@@ -2,7 +2,7 @@ import express from 'express'
 import type { Request, Response, NextFunction } from 'express'
 import dotenv from 'dotenv'
 import createError from 'http-errors'
-// import { logIssues } from './checks'
+import { logIssues } from './checks'
 import indexRouter from './routes/index'
 import errorMessage from './constants/errorMessage'
 import cors from 'cors'
@@ -15,7 +15,6 @@ const localhost = process.env.LOCALHOST_URL
 const frontEndDomain = process.env.FRONTEND_URL
 
 const allowedOrigins = [localhost, frontEndDomain]
-console.log({ frontEndDomain, localhost })
 const corsOptions = {
   origin: function (origin: any, callback: any) {
     if (!origin || allowedOrigins.includes(origin)) {
@@ -53,4 +52,4 @@ app.listen(port, () => {
   console.log(`Server is running on posrt ${port}`)
 })
 
-// logIssues()
+logIssues()
