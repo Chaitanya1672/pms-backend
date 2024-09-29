@@ -2,7 +2,7 @@ import express from 'express'
 import type { Request, Response, NextFunction } from 'express'
 import dotenv from 'dotenv'
 import createError from 'http-errors'
-import { logIssues } from './checks'
+// import { logIssues } from './checks'
 import indexRouter from './routes/index'
 import errorMessage from './constants/errorMessage'
 import cors from 'cors'
@@ -12,10 +12,10 @@ dotenv.config()
 const app = express()
 const port = process.env.SERVER_PORT || 3333
 const localhost = process.env.LOCALHOST_URL
-const fronendDomain = process.env.FORONTEND_URL
+const frontEndDomain = process.env.FRONTEND_URL
 
-const allowedOrigins = [localhost, fronendDomain]
-console.log({ fronendDomain, localhost })
+const allowedOrigins = [localhost, frontEndDomain]
+console.log({ frontEndDomain, localhost })
 const corsOptions = {
   origin: function (origin: any, callback: any) {
     if (!origin || allowedOrigins.includes(origin)) {
@@ -50,7 +50,7 @@ app.use((err: any, req: Request, res: Response) => {
 })
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`)
+  console.log(`Server is running on posrt ${port}`)
 })
 
-logIssues()
+// logIssues()
