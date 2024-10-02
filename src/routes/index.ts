@@ -6,6 +6,7 @@ import options from './alphaVantage/options'
 
 import rapidApiSearch from './rapidApi/searchRoutes'
 import mostActiveStock from './rapidApi/mostActiveStock'
+import stocks from './rapidApi/getStocksRoute'
 
 // Alpha-Vantage routes
 router.use('/time-series', timeSeries)
@@ -13,6 +14,7 @@ router.use('/utility', utility)
 router.use('/options', options)
 
 // Rapid-API routes
+router.use('/stocks', stocks)
 router.use('/search', rapidApiSearch)
 router.use('/most-active-stock', mostActiveStock)
 
